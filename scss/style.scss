@@ -69,6 +69,10 @@ a:hover{
 
 }
 
+.slick-prev, .slick-next{
+    height: 50px;
+}
+
 .slick-prev::before{
     content: url(../img/flecha_ant.png);
 }
