@@ -1,0 +1,65 @@
+:root {
+  --green: #0CA86B;
+  --pink: #C43FB2
+; }
+
+body {
+  font-family: 'Oswald', sans-serif; }
+
+a {
+  color: var(--pink);
+  text-decoration: none; }
+
+a:hover {
+  color: var(--green); }
+
+.verde {
+  color: var(--green); }
+
+/* Header */
+.header {
+  background: var(--green);
+  height: 150px; }
+  .header img {
+    width: 180px;
+    height: auto; }
+
+/* Banner */
+.banner {
+  background: url(../img/fondo_portada.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .banner img {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important; }
+
+.donar {
+  background: url(../img/fondo_ayuda.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px !important;
+  padding-bottom: 200px !important; }
+  @media only screen and (max-width: 640px) {
+    .donar h3 {
+      padding-top: 50px; } }
+  .donar img {
+    max-width: 240px;
+    margin-right: 100px; }
+
+.footer {
+  background: #191919; }
+
+.slick-dots li button::before {
+  font-size: 16px !important;
+  opacity: .75; }
+
+.slick-prev::before {
+  content: url(../img/flecha_ant.png); }
+
+.slick-next::before {
+  content: url(../img/flecha_sig.png); }
+
+.slick-prev::before, .slick-next::before {
+  color: #000 !important; }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cainco</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    
+    <link rel="stylesheet" href="./css/slick.css">
+   <link rel="stylesheet" href="./css/slick-theme.css">
+   <link rel="stylesheet" href="./css/style.css" />
+
+   
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="row header justify-content-center sticky-top py-4">
+        <img src="./img/logo_ayuda_cainco.png" />
+      </header>
+      <!--Banner-->
+      <section class="row banner">
+        <div class="col-md-6">
+          <img class="p-5 w-100" src="./img/contenido_portada.png" />
+        </div>
+      </section>
+
+      <!--Contenido-->
+      <section class="row justify-content-center p-5 my-5">
+        <img src="./img/contenido_montos.png" alt="Montos" />
+      </section>
+
+      <section class="row donar">
+        <div class="col-md-6 d-flex justify-content-end pr-5">
+          <img src="./img/logo_banner.png" />
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <h3 class="text-uppercase font-weight-bold verde">
+            Tambien puedes donar <br />Accediendo <a href="https://multipago.bo/demosdecorazon" target="_blank">AQUÍ</a>
+          </h3>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <h2 class="text-uppercase verde font-weight-bold text-center">
+          EMPRESAS QUE APOYAN
+        </h2>
+
+        <div class="col-10 mx-auto">
+          <div class="multiple-items">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <img class="img-fluid" src="./img/apoyan/empresa1.png" />
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <img class="img-fluid" src="./img/apoyan/empresa2.png" />
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <img class="img-fluid" src="./img/apoyan/empresa3.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="row footer py-5">
+        <div class="col text-light text-center">
+          <p>
+            © 2020 MULTIPAGO by
+            <a class="text-light" href="https://ticketeg.com">Ticketeg</a>
+            <br />
+            Todos los Derechos Reservados. Terminos de uso y condiciones de
+            privacidad
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+   
+   <script>
+     $('.multiple-items').slick({
+     dots: true,
+     infinite: true,
+     speed: 300,
+     dots: true,
+     autoplay: true,
+     autoplaySpeed: 2000,
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 3,
+           slidesToScroll: 1,
+           infinite: true,
+         }
+       },
+       {
+         breakpoint: 600,
+         settings: {
+           slidesToShow: 2,
+           slidesToScroll: 1
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1
+         }
+       }
+
+     ]
+   });
+     </script>
+  </body>
+</html>
