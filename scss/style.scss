@@ -52,10 +52,19 @@ a:hover{
             padding-top: 50px;
         }
     }
+    .dona--img{
+        @media only screen and (max-width: 640px){
+            justify-content: flex-start !important;
+        }
 
+    }
     img {
         max-width: 240px;
         margin-right: 100px;
+        @media only screen and (max-width: 640px){
+            margin: 0;
+            
+        }
     }
 }
 
