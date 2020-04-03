@@ -34,6 +34,11 @@ a:hover {
     padding-top: 150px !important;
     padding-bottom: 150px !important; }
 
+@media only screen and (max-width: 640px) {
+  .montos {
+    max-width: 350px;
+    height: 356.56px; } }
+
 .donar {
   background: url(../img/fondo_ayuda.jpg);
   background-position: center center;
