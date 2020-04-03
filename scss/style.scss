@@ -46,7 +46,11 @@ a:hover{
     background-size: cover;
     padding-top: 200px !important;
     padding-bottom: 200px !important;
-
+    
+    @media only screen and (max-width: 640px){
+        padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    }
     h3{
         @media only screen and (max-width: 640px){
             padding-top: 50px;

@@ -42,6 +42,10 @@ a:hover {
   padding-top: 200px !important;
   padding-bottom: 200px !important; }
   @media only screen and (max-width: 640px) {
+    .donar {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important; } }
+  @media only screen and (max-width: 640px) {
     .donar h3 {
       padding-top: 50px; } }
   @media only screen and (max-width: 640px) {

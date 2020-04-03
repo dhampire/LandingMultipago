@@ -4,7 +4,6 @@ const browserSync = require('browser-sync').create();
 
 style = () =>{
     return gulp.src([
-        'node_modules/bootstrap/scss/bootstrap.scss', 
         'scss/style.scss'
         ])
     .pipe(sass())     
@@ -14,8 +13,6 @@ style = () =>{
 
 js = () => {
     return gulp.src([
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/popper.js/dist/popper.min.js',
         'node_modules/jquery/dist/jquery.min.js'
         ])
     .pipe(gulp.dest('./js'))
