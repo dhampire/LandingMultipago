@@ -16,6 +16,9 @@ a:hover{
 .verde{
     color: var(--green);
 }
+.rosa{
+    color: var(--pink);
+}
 /* Header */ 
 .header{
     background: var(--green);
@@ -32,10 +35,11 @@ a:hover{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
 
-    img{
-        padding-top: 150px !important;
-        padding-bottom: 150px !important;
+    h2 {
+        font-weight: 300;
     }
 }
 .montos{
