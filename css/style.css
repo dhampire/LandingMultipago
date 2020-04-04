@@ -36,8 +36,7 @@ a:hover {
 
 @media only screen and (max-width: 640px) {
   .montos {
-    max-width: 350px;
-    max-height: 356.56px; } }
+    max-height: 340px; } }
 
 .donar {
   background: url(../img/fondo_ayuda.jpg);
