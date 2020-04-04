@@ -19,9 +19,9 @@ a:hover {
 /* Header */
 .header {
   background: var(--green);
-  height: 150px; }
+  height: 100px; }
   .header img {
-    width: 180px;
+    width: 100px;
     height: auto; }
 
 /* Banner */
@@ -37,7 +37,7 @@ a:hover {
 @media only screen and (max-width: 640px) {
   .montos {
     max-width: 350px;
-    height: 356.56px; } }
+    max-height: 356.56px; } }
 
 .donar {
   background: url(../img/fondo_ayuda.jpg);
