@@ -87,12 +87,12 @@ a:hover {
   color: #000 !important; }
 
 .borderColor {
-  border-left: solid 4px var(--pink);
-  border-right: solid 4px var(--pink); }
+  border-left: solid 3px var(--pink);
+  border-right: solid 3px var(--pink); }
 
 .borderLeft {
-  border-left: solid 4px var(--pink); }
+  border-left: solid 3px var(--pink); }
   @media only screen and (max-width: 640px) {
     .borderLeft {
-      border-right: solid 4px var(--pink);
+      border-right: solid 3px var(--pink);
       margin-bottom: 3rem !important; } }
