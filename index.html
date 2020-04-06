@@ -32,7 +32,7 @@
         <div class="col-8 mx-auto">
           <h2 class="verde text-uppercase text-center mt-5" style="font-weight: 500; font-size: 2.8rem;">Total Recaudado
             <br>
-            <span class="text-capitalize rosa pt-4 d-block">Bs 0</span>
+            <p class="text-capitalize rosa pt-4 d-block">Bs. <span id="donaciones"></span></p>
           </h2>
         </div>
       </section>
@@ -101,11 +101,19 @@
       
 
     <script>
-      let url = 'https://jsonplaceholder.typicode.com/todos/1';    
+      const $donaciones = document.querySelector('#donaciones');
+      function getDonaciones(total){
+        $donaciones.innerHTML = total
+      }
+      
+      let url = 'https://multipago.bo/api/v2/cainco-summary-report';    
 
-          fetch('https://jsonplaceholder.typicode.com/todos/1')
-            .then(response => response.json())
-            .then(json => console.log(json))
+      fetch(url)
+      .then(response => response.json())
+      .then(json => {
+        getDonaciones(json.data.total);
+        
+      })
 
     </script>
   </body>
