@@ -53,9 +53,9 @@
 
       <section class="py-5">
         <div class="col-10 mx-auto" >
-          <h2 class="pb-5 text-uppercase verde text-center" style="font-weight: 400; font-size: 1.8rem;">En Coordinacion con:</h2>
-          <div class="mx-auto borderColor col-lg-4 col-md-6 d-flex justify-content-center">
-            <img class="img-fluid" src="./img/apoyan/empresa0.png" style="max-height: 140px;" />
+          <h2 class="pb-5 text-uppercase verde text-center" style="font-weight: 400; font-size: 1.8rem;">En Coordinación con:</h2>
+          <div class="mx-auto  col-lg-4 col-md-6 d-flex justify-content-center">
+            <img class="img-fluid" src="./img/apoyan/empresa0.png" />
           </div>
 
           <h2 class="py-5 text-uppercase verde text-center" style="font-weight: 400; font-size: 1.8rem;">Apoyan:</h2>
@@ -105,7 +105,16 @@
   
 
     <script>
+      let url = 'https://multipago.bo/api/v2/cainco-summary-report';
       
+      fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default'
+      })
+        .then( res => {
+          console.log(res)
+        })
     </script>
   </body>
 </html>
