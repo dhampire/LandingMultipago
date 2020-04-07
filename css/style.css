@@ -101,3 +101,17 @@ a:hover {
     .borderLeft {
       border-right: solid 3px var(--pink);
       margin-bottom: 3rem !important; } }
+
+.borderWhite {
+  border-left: solid 2px #047465;
+  border-right: solid 2px #047465; }
+
+.banco__alimento {
+  bottom: -50px;
+  right: -100px; }
+  @media only screen and (max-width: 640px) {
+    .banco__alimento {
+      bottom: auto;
+      right: -50px; }
+      .banco__alimento img {
+        max-width: 120px; } }
