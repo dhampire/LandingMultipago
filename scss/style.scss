@@ -127,10 +127,6 @@ a:hover{
 .borderWhite{
     border-left: solid 2px #047465;
     border-right: solid 2px #047465;
-    color: white;
-    &:hover{
-        color: var(--pink) !important;
-    }
 }
 
 .banco__alimento{
