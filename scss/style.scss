@@ -113,13 +113,13 @@ a:hover{
 }
 
 .borderColor{
-    border-left: solid 3px var(--pink);
-    border-right: solid 3px var(--pink);
+    border-left: solid 2px #DB8BD1;
+    border-right: solid 2px#DB8BD1;
 }
 .borderLeft{
-    border-left: solid 3px var(--pink);
+    border-left: solid 2px #DB8BD1;
     @media only screen and (max-width: 640px){
-        border-right: solid 3px var(--pink);
+        border-right: solid 2px #DB8BD1;
         margin-bottom: 3rem !important;
         
     }
@@ -127,6 +127,10 @@ a:hover{
 .borderWhite{
     border-left: solid 2px #047465;
     border-right: solid 2px #047465;
+    color: white;
+    &:hover{
+        color: var(--pink) !important;
+    }
 }
 
 .banco__alimento{
@@ -135,8 +139,10 @@ a:hover{
     
     @media only screen and (max-width: 640px){
         bottom: auto;
-        right: -50px;
-        
+        right: auto;
+        display: block;
+        text-align: center;
+        position: relative !important;
         img {
             max-width: 120px;
         }
