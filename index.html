@@ -6,6 +6,8 @@
     <title>Demos de Corazon - CAINCO</title>
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -45,7 +47,7 @@
             alt="Montos"
           />
         </div>
-        <div class="col-8 mx-auto">
+        <div class="col-10 col-md-8 mx-auto">
           <h2
             class="verde text-uppercase text-center mt-5"
             style="font-weight: 500; font-size: 2.8rem;"
@@ -55,7 +57,21 @@
             <p class="text-capitalize rosa pt-4 d-block">
               Bs. <span id="donaciones"></span>
             </p>
-            <div class="position-absolute banco__alimento">
+
+            <div class="col-12 col-md-8 mx-auto my-5">
+              <div class="row">
+                <div class="col-6 totales text-center"><h3 class="my-3">En efectivo</h3></div>
+                <div class="col-6 totales text-center"><h3 class="my-3">En productos</h3></div>
+                <div class="col-6 text-capitalize rosa pt-4 d-block">
+                 <p class="totales--num">Bs. 240.250,00</p>
+                </div>
+                <div class="col-6 text-capitalize rosa pt-4 d-block">
+                 <p class="totales--num">Bs. 82.805,00</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
               <img src="./img/logo_banco.png" alt="Banco de alimentos">
             </div>
           </h2>
@@ -77,43 +93,51 @@
       </section>
       <!-- Galeria -->
       <section  class="container-fluid mt-4">
-        <div class="row justify-content-center">
-              <div class="galeria col-6 col-md-4 col-lg-3 item class="position-relative">
-                <a href="https://unsplash.it/1200/768.jpg?image=200" data-lightbox="photos">
-                   <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
-                   <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
-                     <img src="./img/ico_maximizar.png" alt="">
-                   </div>
-                </a>
-              </div>
-              <div class="galeria col-6 col-md-4 col-lg-3 item">
-                <a href="https://unsplash.it/1200/768.jpg?image=251" data-lightbox="photos">
-                  <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
-                  <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
-                     <img src="./img/ico_maximizar.png" alt="">
-                   </div>
-                </a>
-              </div>
-              <div class="galeria col-6 col-md-4 col-lg-3 item">
-                <a href="https://unsplash.it/1200/768.jpg?image=253" data-lightbox="photos">
-                  <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=253">
-                  <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
-                    <img src="./img/ico_maximizar.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div class="galeria col-6 col-md-4 col-lg-3 item">
-                <a href="https://unsplash.it/1200/768.jpg?image=254" data-lightbox="photos">
-                  <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
-                  <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
-                     <img src="./img/ico_maximizar.png" alt="">
-                   </div>
-                </a>
-              </div>
-              
-      
-          </div>
- 
+        <div class="col-12 px-5 mx-auto">
+          <div class="row justify-content-center galeria">
+            <div class="col-6 col-md-4 col-lg-3 item class="position-relative">
+              <a href="https://unsplash.it/1200/768.jpg?image=200" data-lightbox="photos">
+                 <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
+                 <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="https://unsplash.it/1200/768.jpg?image=251" data-lightbox="photos">
+                <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="https://unsplash.it/1200/768.jpg?image=253" data-lightbox="photos">
+                <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=253">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                  <img src="./img/ico_maximizar.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="https://unsplash.it/1200/768.jpg?image=254" data-lightbox="photos">
+                <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="https://unsplash.it/1200/768.jpg?image=254" data-lightbox="photos">
+                <img class="img-fluid" src="https://unsplash.it/1200/768.jpg?image=251">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+        </div>
+        </div>
+
       </section>
       <section class="py-5">
         <div class="col-10 mx-auto">
@@ -185,9 +209,13 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/popper.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    
+    
+    
     <script>
-
+      // add decimals on number
       const $donaciones = document.querySelector("#donaciones");
       function getDonaciones(total) {
         console.log(total);
@@ -195,12 +223,16 @@
         montoFinal = (Math.round(totalConFijo * 100) / 100).toFixed(2).replace(".", ",");
         $donaciones.innerHTML = numberWithCommas(montoFinal);
       }
+
+      // add poinst and commas on numbers
       function numberWithCommas(x) {
         var parts = x.toString().split(".");
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         return parts.join(".");
       }
 
+
+      // Get data from API
       let url = "https://multipago.bo/api/v2/cainco-summary-report";
 
       fetch(url)
@@ -208,6 +240,44 @@
         .then((json) => {
           getDonaciones(json.data.total);
         });
+
+        // galley
+
+        $(document).ready(function(){
+          $('.galeria').slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            speed: 1000,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+        });
+      });
     </script>
   </body>
 </html>
