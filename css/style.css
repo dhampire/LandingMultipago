@@ -118,3 +118,30 @@ a:hover {
       position: relative !important; }
       .banco__alimento img {
         max-width: 120px; } }
+
+.lb-data .lb-number {
+  display: none !important; }
+
+.lb-dataContainer {
+  position: absolute;
+  top: 1rem;
+  right: 20%; }
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: ease all .5s;
+  margin: 0 15px; }
+  .overlay:hover {
+    opacity: 1; }
+  @media only screen and (max-width: 640px) {
+    .overlay {
+      margin: 0; } }
+
+@media only screen and (max-width: 640px) {
+  .galeria {
+    padding: 5px; } }
