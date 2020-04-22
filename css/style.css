@@ -125,7 +125,8 @@ a:hover {
 .lb-dataContainer {
   position: absolute;
   top: 1rem;
-  right: 20%; }
+  right: 20%;
+  z-index: 999; }
 
 .overlay {
   top: 0;
