@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demos de Corazon - CAINCO</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    
+   <link rel="stylesheet" href="./css/style.css" />
+
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="row header justify-content-center sticky-top py-2">
+        <img src="./img/logo_ayuda_cainco.png" />
+      </header>
+      <!--Banner-->
+      <section class="row banner">
+        <div class="col-md-6 px-5">
+          <img class="pb-0 w-100" src="./img/contenido_portada.png" />
+          <h2 class="text-light text-uppercase pt-3" style="font-size: 2.5rem;">Nuestra gente nos necesita <br>
+          DONA <a target="_blank" href="https://multipago.bo/demosdecorazon">AQUÍ</a></h2> 
+        </div>
+      </section>
+
+      <!--Contenido-->
+      <section class="row my-5">
+        <div class="col-11 mx-auto d-flex ">
+          <img class="mx-auto montos" src="./img/contenido_montos.png" alt="Montos" />
+        </div>
+        <div class="col-8 mx-auto">
+          <h2 class="verde text-uppercase text-center mt-5" style="font-weight: 500; font-size: 2.8rem;">Total Recaudado
+            <br>
+            <p class="text-capitalize rosa pt-4 d-block">Bs. <span id="donaciones"></span></p>
+          </h2>
+        </div>
+      </section>
+
+      <section class="row donar">
+        <div class="col-8 col-md-6 d-flex justify-content-end py-5 dona--img">
+          <img class="img-fluid" src="./img/logo_banner.png" />
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-center">
+          <h2 class="text-uppercase font-weight-bold verde">
+            Realiza tu donación <br />Accediendo <a href="https://multipago.bo/demosdecorazon" target="_blank">AQUÍ</a>
+
+          </h2>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="col-10 mx-auto" >
+          <h2 class="pb-5 text-uppercase verde text-center" style="font-weight: 400; font-size: 1.8rem;">En Coordinación con:</h2>
+          <div class="mx-auto col col-lg-5 col-md-6 d-flex justify-content-center p-0">
+            <img class="img-fluid comite" src="./img/apoyan/empresa0.png" />
+          </div>
+
+          <h2 class="py-5 text-uppercase verde text-center" style="font-weight: 400; font-size: 1.8rem;">Apoyan:</h2>
+
+          <div class="row d-flex justify-content-center">
+            <div class="mx-auto borderColor col-lg-3 col-md-6 d-flex justify-content-center">
+              <img class="img-fluid" src="./img/apoyan/empresa1.png" />
+            </div>
+          </div>
+
+
+            <div class="row py-5 d-flex justify-content-center">
+              <div class="borderLeft col-lg-3 col-md-6 d-flex justify-content-center">
+                <img class="img-fluid" src="./img/apoyan/empresa2.png"  />
+              </div>
+              <div class="borderColor col-lg-3 col-md-6 d-flex justify-content-center">
+                <img class="img-fluid" src="./img/apoyan/empresa3.png" />
+              </div>
+            </div>
+
+            <div class="row py-5 d-flex justify-content-center">
+              <div class="borderLeft col-lg-3 col-md-6 d-flex justify-content-center">
+                <img class="img-fluid" src="./img/apoyan/empresa4.png"  />
+              </div>
+              <div class="borderColor col-lg-3 col-md-6 d-flex justify-content-center">
+                <img class="img-fluid" src="./img/apoyan/empresa5.png" />
+              </div>
+            </div>
+
+        </div>
+      </section>
+      <footer class="row footer py-5">
+        <div class="col text-light text-center">
+          <p>
+            © 2020 MULTIPAGO <br>            Todos los Derechos Reservados. Terminos de uso y condiciones de
+            privacidad
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+      
+
+    <script>
+ function numberWithCommas(x) {
+         var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+      }
+      const $donaciones = document.querySelector('#donaciones');
+      function getDonaciones(total){
+	console.log(total);
+	var totalConFijo= total + 11180;
+        $donaciones.innerHTML = numberWithCommas(totalConFijo);
+      }
+      function numberWithCommas(x) {
+    	 var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+      }
+      let url = 'https://multipago.bo/api/v2/cainco-summary-report';    
+
+      fetch(url)
+      .then(response => response.json())
+      .then(json => {
+        getDonaciones(json.data.total);
+        
+      })
+
+    </script>
+  </body>
+</html>
