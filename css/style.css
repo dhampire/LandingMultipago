@@ -127,6 +127,9 @@ a:hover {
   top: 1rem;
   right: 20%;
   z-index: 999; }
+  @media only screen and (max-width: 640px) {
+    .lb-dataContainer {
+      right: 10%; } }
 
 .overlay {
   top: 0;
