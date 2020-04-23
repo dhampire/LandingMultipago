@@ -55,7 +55,7 @@
             Total Recaudado
             <br />
             <p class="text-capitalize rosa pt-4 d-block">
-              Bs. <span id="donaciones"></span>
+              Bs. <span id="total"></span>
             </p>
 
             <div class="col-12 col-md-8 mx-auto my-5">
@@ -63,10 +63,12 @@
                 <div class="col-6 totales text-center"><h3 class="my-3">En efectivo</h3></div>
                 <div class="col-6 totales text-center"><h3 class="my-3">En productos</h3></div>
                 <div class="col-6 text-capitalize rosa pt-4 d-block">
-                 <p class="totales--num">Bs. 240.250,00</p>
+                 <p  class="totales--num"> Bs. <span id="donaciones"></span></p>
                 </div>
                 <div class="col-6 text-capitalize rosa pt-4 d-block">
-                 <p class="totales--num">Bs. 82.805,00</p>
+
+		              <p  class="totales--num"> Bs. <span  id="enProducto"></span></p>
+
                 </div>
               </div>
             </div>
@@ -127,6 +129,39 @@
                  </div>
               </a>
             </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="./img/galeria/foto5.jpg" data-lightbox="photos">
+                <img class="img-fluid" src="./img/galeria/foto5.jpg">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="./img/galeria/foto6.jpg" data-lightbox="photos">
+                <img class="img-fluid" src="./img/galeria/foto6.jpg">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="./img/galeria/foto7.jpg" data-lightbox="photos">
+                <img class="img-fluid" src="./img/galeria/foto7.jpg">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 item">
+              <a href="./img/galeria/foto4.jpg" data-lightbox="photos">
+                <img class="img-fluid" src="./img/galeria/foto4.jpg">
+                <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
+                   <img src="./img/ico_maximizar.png" alt="">
+                 </div>
+              </a>
+            </div>
+
         </div>
         </div>
 
@@ -209,13 +244,27 @@
     <script>
       // add decimals on number
       const $donaciones = document.querySelector("#donaciones");
-      function getDonaciones(total) {
-        console.log(total);
-        totalConFijo = total + 97300;
-        montoFinal = (Math.round(totalConFijo * 100) / 100).toFixed(2).replace(".", ",");
+	  const $enProducto= document.querySelector("#enProducto");
+	  const $total= document.querySelector("#total");
+      
+	  function getDonaciones(total) {
+        debugger;
+		console.log(total);
+        totalConFijo = total + 167350;
+        montoFinal = calculoMatematico(totalConFijo);
         $donaciones.innerHTML = numberWithCommas(montoFinal);
-      }
+		var montoEnProducto=82805;
 
+        $enProducto.innerHTML = numberWithCommas(calculoMatematico(montoEnProducto) );
+		var total= totalConFijo + montoEnProducto;
+        $total.innerHTML = numberWithCommas(calculoMatematico(total));
+
+      }
+      
+	  function calculoMatematico(valor){
+	  return (Math.round(valor * 100) / 100).toFixed(2).replace(".", ",");
+	  }
+	  	
       // add poinst and commas on numbers
       function numberWithCommas(x) {
         var parts = x.toString().split(".");
