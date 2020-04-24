@@ -154,8 +154,8 @@
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3 item">
-              <a href="./img/galeria/foto4.jpg" data-lightbox="photos">
-                <img class="img-fluid" src="./img/galeria/foto4.jpg">
+              <a href="./img/galeria/foto8.jpg" data-lightbox="photos">
+                <img class="img-fluid" src="./img/galeria/foto8.jpg">
                 <div class="overlay position-absolute my-auto d-flex align-items-center justify-content-center">
                    <img src="./img/ico_maximizar.png" alt="">
                  </div>
@@ -248,15 +248,15 @@
 	  const $total= document.querySelector("#total");
       
 	  function getDonaciones(total) {
-        debugger;
-		console.log(total);
-        totalConFijo = total + 167350;
+        var montoEnProducto=82805;
+	console.log(total);
+        totalConFijo = total + 167350 - montoEnProducto;
         montoFinal = calculoMatematico(totalConFijo);
         $donaciones.innerHTML = numberWithCommas(montoFinal);
-		var montoEnProducto=82805;
+	
 
         $enProducto.innerHTML = numberWithCommas(calculoMatematico(montoEnProducto) );
-		var total= totalConFijo + montoEnProducto;
+	var total= totalConFijo + montoEnProducto;
         $total.innerHTML = numberWithCommas(calculoMatematico(total));
 
       }
